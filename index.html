@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <!-- Rubric: Title -->
+        <title>State of Colorado</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Rubric: Image + alternate text (background image, so using aria-label instead of alt=) -->
+        <div class="h_banner" role="img" aria-label="Image of Beautiful Colorado Mountains">
+            <!-- Rubric: consistent menu + nav bar -->
+            <div class="nav">
+                <!-- Rubric: Image + alternate text + relevant image-->
+                <img src="images/colorado_flag.png" class="flag" alt="Flag of Colorado">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <!-- Rubric: External link with target attribute -->
+                    <li><a href="https://co.colorado.gov/" target="_blank">Official State Website</a></li>
+                    <li><a href="cities/denver.html">Denver</a></li>
+                    <li><a href="cities/colorado_springs.html">Colorado Springs</a></li>
+                    <li><a href="cities/boulder.html">Boulder</a></li>
+                </ul>
+            </div>
+            <!-- Rubric: section to display section content -->
+            <div class="section">
+                <!-- Rubric: Header -->
+                <header>
+                    <h1>Colorado the Beautiful</h1>
+                </header>
+                <p>List of Cities described</p>
+                <!-- Rubric: Ordered list -->
+                <ol type="A">
+                    <li>Boulder</li>
+                    <li>Colorado Springs</li>
+                    <li>Denver</li>
+                </ol>
+
+                <br>
+                <br>
+                <!-- Rubric: form with first, last, email, email verification, and question + includes placeholders -->
+                <form name="question">
+                    <label for="fname">First Name</label><br>
+                        <input type="text" id="fname" name="fname" placeholder="John"><br>
+                    <label for="lname">Last Name</label><br>
+                        <input type="text" id="lname" name="lname" placeholder="Smith"><br>
+                    <label for="email1">Email Address</label><br>
+                        <input type="text" id="email1" name="email1" placeholder="john.smith@madeup.com"><br>
+                    <label for="email2">Confirm Email Address</label><br>
+                        <input type="text" id="email2" name="email2" placeholder="john.smith@madeup.com"><br>
+                    <label for="question">Question about Colorado?</label><br>
+                        <input type="text" id="question" name="question" placeholder="something"><br>
+                    <button class="button" onClick="Javascript:validateForm()" name="Submit" type="submit" value="submit1">
+                        <span>Submit</span></button>
+                </form>
+                <!-- Rubric: Javascript email validation -->
+                <script>
+                    function validateForm() {
+                        // Get info from form
+                        const done = 0;
+                        const email1 = document.getElementById("email1");
+                        const email2 = document.getElementById("email2");
+
+                        // Compare fields
+                        if (email1.value == email2.value) {
+                            // Notifies user that question is submitted
+                            alert("Submitting question");
+                            done = 1;
+                        } else {
+                            // Alerts user emails do not match
+                            alert("Please check email addresses");
+                        }
+                    }
+                </script>
+
+
+                <br>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br>
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                
+            </div>
+            <!-- Rubric: Aside -->
+            <aside class="sidebar">
+                <h2>Information about Colorado</h2>
+                <!-- Rubric: ID selector to format the p attr -->
+                <p id="sidebar_id">Capital: Denver</p>
+                <p id="sidebar_id">Joined Union: August 1, 1876</p>
+                <p id="sidebar_id">Population: 5,877,610</p>
+                <p id="sidebar_id">Median Income: $75,200</p>
+                <p id="sidebar_id">Nickname: The Centennial State</p>
+            </aside>
+        </div>
+
+    </body>
+</html>
