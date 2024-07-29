@@ -1,178 +1,124 @@
-*{
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    /* Rubric: font-family declaration */
-    font-family: Arial;
-}
-
-/* These provide the background images, etc for the associated pages */
-.h_banner{
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url(images/colorado_background.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url(images/beach_background.jpg);
+    background-attachment: fixed;
     background-size: cover;
-    background-position: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
-.d_banner{
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url(images/denver.jpg);
-    background-size: cover;
-    background-position: center;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(35, 77, 65, 0.6);
+    padding: 10px 20px;
 }
 
-.b_banner{
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url(images/boulder.jpg);
-    background-size: cover;
-    background-position: center;
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-.c_banner{
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url(images/colorado_springs.jpg);
-    background-size: cover;
-    background-position: center;
+nav ul li {
+    margin: 0 15px;
 }
 
-/* This section provides formatting for the flag and nav */
-.flag{
-    width: 120px;
-    cursor: pointer;
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
 }
 
-.nav{
-    width: 85%;
-    margin: auto;
-    padding: 35px 0;
+main {
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+h1 {
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    color: #ffffff;
+    font-size: 40px;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.category {
     display: flex;
     align-items: center;
-    justify-content: space-between;   
-}
-
-/* Rubric: hover rollover effect for nav buttons */
-.nav ul li:hover::after{
+    justify-content: space-between;
     width: 100%;
+    max-width: 800px; /* Set a max-width for better alignment */
+    margin: 10px 0;
 }
 
-.nav ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-    /* Rubric: relative positioning used */
-    position: relative;
+.category img {
+    width: 150px;
+    height: 100px;
 }
 
-.nav ul li a{
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
+.category p {
+    margin: 0 15px;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    padding: 10px; /* Add some padding for better readability */
+    border-radius: 5px; /* Optional: add rounded corners for better aesthetics */
 }
 
-.nav ul li::after{
-    content: '';
-    height: 3px;
-    width: 0%;
-    background: #009688;
-    /* Rubric: absolute positioning used */
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5s;
+.category.left {
+    justify-content: flex-start;
 }
 
-/* Provides formatting for the section */
-.section{
-    width:100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+.category.right {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.main-content {
     text-align: center;
-    color: #fff;
+    padding: 20px;
+    border: 1px transparent #ccc;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
 }
 
-.section h1{
-    font-size: 70px;
-    margin-top: 80px;
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(35, 77, 65, 0.6);
+    padding: 10px 20px;
 }
 
-.section p{
-    margin: 20px auto;
-    font-weight: 100;
-    line-height: 25px;
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.section li{
-    display: list-item;
-    list-style-position: inside;
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    color: #ffffff;
 }
 
-.section table{
-    color: #fff;
-}
-/* This provides formatting for the aside sidebar */
-/* Rubric: element selector (text-align) used  */
-/* Rubric: float property used  */
-.sidebar_home{
-    background: transparent;
-    float: left;
-    text-align: left;
-    width: 300px;
-    font-size: 12px;
-    color: #fff;
-    padding: 5px 5px;
-    height: 100vh;
-}
-
-/* Rubric: ID selector to format the p attr */
-p#sidebar_id{
-    font-size: 12px;
-    color: #fff;
-}
-
-.sidebar{
-    background: transparent;
-    float: right;
-    text-align: left;
-    width: 300px;
-    font-size: 12px;
-    color: #fff;
-    padding: 5px 5px;
-    height: 100vh;
-}
-
-/* Formatting for the table */
-.table{
-    border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 0.9em;
-    min-width: 600px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.15);
-}
-
-.table thead tr{
-    background-color: #009879;
-    color: #fff;
-    text-align: left;
-}
-
-.table th,
-.table td{
-    padding: 12px 15px;
-}
-
-.table tbody tr{
-    border-bottom: 1px solid #dddddd;
-}
-
-.table tbody tr:nth-of-type(even){
-    background-color: #8a8a8a;
-}
-
-.table tbody tr:last-of-type{
-    border-bottom: 2px solid #8a8a8a;
+.footer-info p {
+    margin: 5px 0;
 }
