@@ -84,6 +84,7 @@ h1 {
 
 .category.left {
     justify-content: flex-start;
+    text-align: left;
 }
 
 .category.right {
